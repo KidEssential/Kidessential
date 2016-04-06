@@ -1,0 +1,47 @@
+#feedback{
+	position:fixed;
+	top:170px;
+	margin-left:935px;
+	opacity:0.8;
+	z-index:1110;
+	width:400px;
+	height:410px;
+	
+	line-height:0.7;
+	
+}
+
+#f1{
+	padding:20px;
+	opacity:1;
+	z-index:11000;
+	height:380px;
+	background-color:grey;
+	display:none;
+	color:black;
+}
+#f1 input{
+	border:1px outset grey;
+	box-shadow: 0px 0px 5px black;
+	height:27px;
+}
+#f1 textarea{
+	border:1px outset grey;
+	box-shadow: 0px 0px 3px black;
+}
+#idsubmit {
+    float: left;
+    height: 30px;
+    font-size: 1em;
+    margin-left: 42.665816%;
+    margin-top: 0px;
+    clear: both;
+    width: 100px;
+    color: black;
+    background-color: #ADAFAC;
+    
+}
+
+#idsubmit:hover {
+    background-color: darkgrey;
+}

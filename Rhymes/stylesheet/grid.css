@@ -1,0 +1,299 @@
+
+/* new css/////////////////////////////////////////////////////////////////////////// */
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+ overflow-x: hidden;   
+}
+.cd-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #121827;
+  background-image: url(../../Startpage/img/header.png);
+  background-repeat:no-repeat;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 10001;
+}
+.cd-header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-header #cd-logo {
+  float: left;
+  margin: 13px 0 0 5%;
+}
+.cd-header #cd-logo img {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .cd-header {
+    height: 70px;
+  }
+  .cd-header #cd-logo {
+    margin: 23px 0 0 5%;
+  }
+}
+
+
+.cd-main-nav {
+	position:relative;
+	top:-3px;
+  float: right;
+  margin-right: 70px;
+  width: 50px;
+  height: 100%;
+  
+ /*  background: url("../img/cd-icon-menu.svg") no-repeat center center; */
+/*   background-size: 44px 44px; */
+  cursor: pointer;
+}
+.cd-main-nav ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style-type:none;
+  
+/*   width: 100%; */
+  
+/*   -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px); */
+}
+.cd-main-nav ul.is-visible {
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  transform: translateY(50px);
+} 
+.cd-main-nav a {
+  display: block;
+  height: 45px;
+
+width:130%;
+  line-height: 50px;
+padding:10%;
+	
+  background: #2f292a;
+  border-top: 1px solid #453c3d;
+  text-align:center;
+  border-radius:30px;
+  color: #8e7d7f;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+@media only screen and (min-width: 768px) {
+  .cd-main-nav {
+    width: auto;
+    height: auto;
+    background: none;
+    cursor: auto;
+  }
+  .cd-main-nav ul {
+    position: static;
+    width: auto;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    line-height: 70px;
+  }
+  .cd-main-nav ul.is-visible {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .cd-main-nav li {
+    display: inline-block;
+    margin-left: 1em;
+  }
+  .cd-main-nav a {
+    display: inline-block;
+    height: auto;
+    line-height: normal;
+    background: transparent;
+    padding: .6em 1em;
+    border-top: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+    
+  .cd-main-nav a:hover{
+      -webkit-stroke-width: 5.3px;
+      -webkit-stroke-color: #FFFFFF;
+      -webkit-fill-color: #FFFFFF;
+      border-top: 2px solid #009ae1;
+       -webkit-transition: border-color 0.8s ease;
+  -moz-transition: border-color 0.8s ease;
+  -ms-transition: border-color 0.8s ease;
+  -o-transition: border-color 0.8s ease;
+  transition: border-color 0.8s ease;
+    }
+  .no-touch .cd-main-nav a:hover {
+    color: #99a478;
+      border-color: #009ae1;
+  }
+}
+
+
+    
+body {
+	background: url(../img/tile.jpg);
+	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-weight: 200;
+}
+
+h1 {
+	/* font-family: 'font-family: 'Source Sans Pro', sans-serif;', sans-serif; */
+	font-family: Trajan Pro;
+	font-size: 4em;
+	font-weight: 800;
+	letter-spacing: -3px;
+	margin: 0 0 20px;
+	margin-top:-50px;
+	text-align: center;
+	text-shadow: 5px 5px 0 #fff, 2px 2px 0 #bbb;
+}
+hr {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #fff;
+	margin: 25px 0;
+	clear: both;
+}
+.centered {
+	text-align: center;
+}
+.wrapper {
+	width: 100%;
+	padding: 30px 0;
+}
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/* ---------- Zoom container ---------- */
+.image-zoom-container {
+	list-style: none;
+	font-size: 0px;
+}
+.zoom-container {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	width: 33.33%; /* this value + 2 should = 33%   this controls the number of columns*/
+	font-size: 16px;
+	font-size: 1rem;
+	border: 1px solid #fff;
+	vertical-align: top;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	z-index:0;
+}
+.zoom-container img {
+	display: block;
+	width: 100%;
+	height: auto;
+	-webkit-transition: all .5s ease; /* Safari and Chrome */
+    -moz-transition: all .5s ease; /* Firefox */
+    -ms-transition: all .5s ease; /* IE 9 */
+    -o-transition: all .5s ease; /* Opera */
+    transition: all .5s ease;
+}
+.zoom-container .zoom-caption {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	background: rgba(0, 0, 0, .5);
+	-webkit-transition: all .5s ease; /* Safari and Chrome */
+    -moz-transition: all .5s ease; /* Firefox */
+    -ms-transition: all .5s ease; /* IE 9 */
+    -o-transition: all .5s ease; /* Opera */
+    transition: all .5s ease;
+}
+.zoom-container .zoom-caption h3 {
+	display: block;
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.5em;                                /* EDIT HERE */
+	font-weight: 700;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 42% 0 0;
+	padding: 0px 0;
+	border-top: 5px solid rgba(255, 255, 255, .15);
+	border-bottom: 5px solid rgba(255, 255, 255, .15);
+}
+.zoom-container:hover img {
+	-webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);
+}
+.zoom-container:hover .zoom-caption {
+	background: none;
+}
+
+@media (max-width: 1199px) {
+	.container {
+		width: auto;
+		padding: 0 10px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.zoom-container {
+		width: 50%;
+	}
+
+}
+
+@media (max-width: 480px) {
+	
+	.zoom-container {
+		width: 100%;
+	}
+	
+}
+    
+#page{
+    text-align: center;
+    font-family: monotype corsiva;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#page a{
+    display: inline-block;
+    width: 50px;
+	border-radius:10px;
+    background-color:#141414;
+    color: #EBEBEB;
+    text-decoration: none;
+}
+
+#page a:hover{
+     background-color:#EBEBEB;
+    color:#141414 ;
+}
